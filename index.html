@@ -513,7 +513,7 @@
 
     <script>
     // Configuration - UPDATED FOR POC
-    const WEBHOOK_URL = 'https://v-1---mai-interface-webhook-latest-1043097361429.us-central1.run.app/interface/webhook/1/4166666-webhook';
+    const WEBHOOK_URL = 'https://study-switcher-proxy-dg82j7390-medabledevices-projects.vercel.app/api/proxy';
     
     const deviceConfig = {
         deviceId: "1b64a06b-c76a-45d2-a0aa-1a293da982fa",
@@ -613,10 +613,8 @@ async function switchStudy() {
             targetGroupId: selectedStudy.groupId
         });
         
-        // Use no-cors mode to bypass CORS restrictions
         await fetch(WEBHOOK_URL, {
             method: 'POST',
-            mode: 'no-cors',  // This bypasses CORS
             headers: {
                 'Content-Type': 'application/json'
             },
