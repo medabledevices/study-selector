@@ -634,9 +634,9 @@ async function switchStudy() {
         
         // Show success
         overlay.classList.remove('active');
-        document.getElementById('successMessage').textContent = 
-            `Your device switch request has been sent for ${selectedStudy.studyName}. ` +
-            `Check webhook.site to verify the request was received.`;
+document.getElementById('successMessage').textContent = 
+    `Your device has been switched to ${selectedStudy.studyName}. ` +
+    `The device will reconfigure automatically within a few minutes.`;
         document.getElementById('successModal').classList.add('active');
         
     } catch (error) {
