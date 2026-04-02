@@ -512,7 +512,14 @@
     </div> 
 
     <script>
-    // Configuration - UPDATED FOR POC
+console.log("FULL URL:", window.location.href);
+alert("URL:\n" + window.location.href);
+
+const params = new URLSearchParams(window.location.search);
+console.log("PARAMS:", Object.fromEntries(params.entries()));
+alert("Params:\n" + JSON.stringify(Object.fromEntries(params.entries()), null, 2));
+        
+        // Configuration - UPDATED FOR POC
     const WEBHOOK_URL = 'https://study-switcher-proxy.vercel.app/api/proxy';
     
     const deviceConfig = {
